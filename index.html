@@ -1,6 +1,8 @@
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://unpkg.com/viz.js@1.8.2/viz.js" type="javascript/worker"></script>
 <script src="https://unpkg.com/d3-graphviz@2.6.1/build/d3-graphviz.js"></script>
+
+<input type="button" value="new window open" onclick="buttonClick()">
 <div id="graph"></div>
 <script>
     // URLを取得
@@ -16,4 +18,11 @@
         .fade(false)
         .zoom(false)
         .renderDot(digraph);
+
+
+
+    // ボタン押下で、別タブを表示
+    function buttonClick(){
+        window.open(window.location.href, '_blank');
+    }
 </script>
